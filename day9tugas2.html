@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kayanya judulnya itu tugas dom manipulation</title>
+    <style>
+        body {
+            margin-top: 50px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 20px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table>
+           <thead>
+                <tr>
+                    <th>Form Produk</th>
+                    <th>Form Hewan</th>
+                </tr>
+           </thead>
+           <tbody>
+                <tr>
+                    <td>
+                        <center>
+                            <p>
+                                Nama: <input id="namaProduk"type="text">
+                            </p>
+                            <p>
+                                Harga: <input id="hargaProduk" type="number">
+                            </p>
+                            <p>
+                                Kondisi:<input type="radio" name="condition" value="Baru"> Baru
+                                        <input type="radio" name="condition" value="Second"> Second
+                            </p>
+                            <p>
+                                Kategori:<select name="kategori" id="kategori">
+                                            <option value="Elektronik">Eletronik</option>
+                                            <option value="Pakaian">Pakaian</option>
+                                            <option value="Otomotif">Otomotif</option>
+                                            <option value="Buku">Buku</option>
+                                        </select>
+
+                            </p>
+                            <p>
+                                <input type="button" value="Tambahkan" onclick="addNewProduct()">
+                            </p>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <p>
+                                Nama: <input id="namaHewan" type="text">
+                            </p>
+                            <p>
+                                Umur: <input id="umurHewan" type="number">
+                            </p>
+                            <p>
+                                Kelamin:<input type="radio" name="kelamin" value="Jantan"> Jantan
+                                        <input type="radio" name="kelamin" value="Betina"> Betina
+                            </p>
+                            <p>
+                            </p>
+                                Status:<input type="radio" name="status" value="Liar"> Liar
+                                        <input type="radio" name="status" value="Peliharaan"> Peliharaan
+                            <p>
+                                <input type="button" value="Tambahkan" onclick="addNewAnimal()">
+                            </p>
+                        </center>
+                    </td>
+                </tr>
+           </tbody>
+        </table>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Data Produk
+                    </th>
+                    <th>
+                        Data Hewan 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Harga</th>
+                                    <th>Kondisi</th>
+                                    <th>Kategori</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kontenProduk">
+                                <!-- <tr>
+                                    <td>Xiamomi</td>
+                                    <td>1000000</td>
+                                    <td>Baru</td>
+                                    <td>Elektronik</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Umur</th>
+                                    <th>Kelamin</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kontenHewan">
+                                <!-- <tr>
+                                    <td>Rusty</td>
+                                    <td>3</td>
+                                    <td>Jantan</td>
+                                    <td>Peliharaan</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+<script src="day9tugas2.js"></script>
+</body>
+</html>
