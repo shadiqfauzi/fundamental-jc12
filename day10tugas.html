@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toko Susilo v2</title>
+    <script defer src="index.js"></script>
+    <style>
+        table, tr, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama : <input type="text" id="namaFilter" oninput="filterNama()"></p>
+            <p>Harga: <input type="number" id="hargaMin" onchange="filterHarga()"> - <input type="number" id="hargaMax" onchange="filterHarga()"></p>
+            <p>Category:
+                <select name="" id="categoryInput2" onchange="filterCategory()">
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td>
+                    <input type="text" id="nama" placeholder="Nama">
+                </td>
+                <td>
+                    <input type="number" id="harga" placeholder="Harga">
+                </td>
+                <td>
+                    <select name="category" id="categoryInput">
+                        
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="stock" placeholder="Stock">
+                </td>
+            </table>
+            <input type="button" value="Add Data" onclick="addData()">
+        </fieldset>
+        <fieldset>
+            <legend>Datftar Menu</legend>
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Category</th>
+                    <th>Harga</th>
+                    <th>Stock</th>
+                </thead>
+                <tbody id="output">
+
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
