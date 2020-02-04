@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toko Susilo v2</title>
+    <script defer src="day11tugas.js"></script>
+    <style>
+        table, tr, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th{
+            padding: 20px;
+        }
+        #payment, #dataAdd {
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama : <input type="text" id="namaFilter" oninput="filterNama()"></p>
+            <p>Harga: <input type="number" id="hargaMin" onchange="filterHarga()"> - <input type="number" id="hargaMax" onchange="filterHarga()"></p>
+            <p>Category:
+                <select name="" id="categoryInput2" onchange="filterCategory()">
+                </select>
+            </p>
+            <p><input type="button" value="Reset filter" onclick="resetFilter()"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td>
+                    <input type="text" id="nama" placeholder="Nama">
+                </td>
+                <td>
+                    <input type="number" id="harga" placeholder="Harga">
+                </td>
+                <td>
+                    <select name="category" id="categoryInput">
+                        
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="stock" placeholder="Stock">
+                </td>
+            </table>
+            <input type="button" id="dataAdd" value="Add Data" onclick="addData()">
+        </fieldset>
+        <fieldset>
+            <legend>Datftar Menu</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Category</th>
+                        <th>Harga</th>
+                        <th>Stock</th>
+                        <th>Buy</th>
+                        <th colspan="2">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="output">
+                    
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Cart</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nama</th>
+                        <th>Category</th>
+                        <th>Harga</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart">
+                   
+                </tbody>
+            </table>
+            <input id="payment" type="button" value="Payment" onclick="">
+        </fieldset> 
+        
+    </form>
+</body>
+</html>
